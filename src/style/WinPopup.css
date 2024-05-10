@@ -1,0 +1,42 @@
+.winpopup{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.winpopup-container{
+    width: 90%;
+    margin: auto;
+    background-color: green;
+    border-radius: 20px;
+}
+.winpopup-img{
+    width: 100%;
+}
+.winpopup-price{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    font-size: 45px;
+    color: gold;
+}
+.winpopup-button{
+    background-color: gold;
+    color: green;
+    border: none;
+    margin: auto;
+    display: grid;
+    width: 150px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px;
+    &:hover{
+        background-color: #cbad01;
+    }
+}

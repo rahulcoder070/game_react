@@ -1,0 +1,73 @@
+.mathgame{
+    width: 100%;
+}
+.mathgame-container{
+    padding-inline: 10%;
+}
+.game-heading{
+    margin-top: 15vh;
+    text-align: center;
+}
+.money-add-game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.money-add-game>h3{}
+.money-add-game>input{
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid green;
+    outline: none;
+    font-size: 30px;
+    width: 130px;
+}
+.no-spinner {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Remove inner padding and default margin */
+}
+.money-add-game>button{
+    margin-top: 30px;
+    border: none;
+    background-color: green;
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+.math-question-card{
+    margin-top: 20vh;
+}
+.math-question{
+    font-size: 20px;
+    margin-block: 20px;
+}
+.math-question-options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.math-question-options div{
+    margin-block: 10px;
+}
+.math-question-options input{}
+.math-question-options label{
+    cursor: pointer;
+    font-size: 18px;
+}
+.qustion-submit-button{
+    background-color: green;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 30px;
+}

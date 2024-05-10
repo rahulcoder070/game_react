@@ -1,0 +1,35 @@
+.Navbar{
+    width: 100%;
+    background-color: green;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-container{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10%;
+}
+.navbar-container>a{
+    text-decoration: none;
+}
+.navlogo{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+.navlogo>span{
+    color: gold !important;
+}
+.nav-item-button{
+    border: none;
+    background-color: gold;
+    color: green;
+    font-weight: 550;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}

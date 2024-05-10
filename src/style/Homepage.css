@@ -1,0 +1,62 @@
+.Homepage{
+    width: 100%;
+}
+.Homepage-container{
+    padding: 2% 10%;
+}
+.Homepage-show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 100px 50px;
+}
+.homepage-Title{
+    font-size: 25px;
+}
+.homepage-Title>span{
+    color: gold;
+}
+.Homepage-1st-img{
+    width: 70vw;
+}
+.Page-Heading{
+    text-align: center;
+    font-size: 40px;
+    background-image: linear-gradient(90deg, #ffd90001, gold, #ffd90001);
+    text-shadow: 0 2px 5px black;
+}
+.homepage-games{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.homepage-games-card{
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+.homepage-games-card>img{
+    width: 100%;
+}
+.homepage-games-card>div{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+.game-earning-multply{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    color: gold;
+    background-color: green;
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
