@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../style/MathGame.css';
 import Timer from '../component/Timer';
 import WinPopup from '../component/winPopup';
+import LosePopup from '../component/LosePopup';
+import TimeOut from '../component/TimeOut';
 
 const MathGame = () => {
 
@@ -13,7 +15,8 @@ const MathGame = () => {
     const [secondNumber, setSecondNumber] = useState('');
     const [rightAnswer, setRightAnswer] = useState('');
     const [questionOptions, setQuestionOptions] = useState('');
-    const [gameResult, setGameResult] = useState(false);
+    const [gameResultPopup, setGameResultPopup] = useState(false);
+    const [gameResult, setGameResult] = useState("");
       
       const handleChange = (e) => {
         setSelectedValve(e.target.value)
@@ -49,19 +52,22 @@ const MathGame = () => {
         setStartGame(false);
         if(timer > 0){
             if(selectedValve == rightAnswer){
-                setGameResult(true);
-                setAmount(amount*2);
+                setGameResultPopup(true);
+                setGameResult("win");
             }else{
-                return alert("Wrong")
+                setGameResult("lose");
             }
         }else{
-            return alert("Time Out")
+            setGameResult("Time-Out");
         }
     }
 
     const handleChildData = () => {
-        setGameResult(false);
+        setGameResultPopup(false);
+        setGameResult('');
+        setAmount(0);
     }
+
   return (
     <>
     <div className='mathgame'>
@@ -95,14 +101,16 @@ const MathGame = () => {
         <h2 className='game-heading'>Invest and Earn Real Money 5×</h2>
         <div className="money-add-game">
             <h3>Enter Amount</h3>
-            <input type="Number" autoFocus value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="numeric" className="no-spinner"/>
+            <input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="numeric" className="no-spinner"/>
             <button onClick={()=> handleStartGame()}>Start</button>
         </div>
         </>}
         </div>
     </div>
     
-    {gameResult && <WinPopup amount={amount} sendToParent={handleChildData}/>}
+    {gameResult == "win" && <WinPopup amount={amount} sendToParent={handleChildData}/>}
+    {gameResult == "lose" && <LosePopup amount={amount} sendToParent={handleChildData}/>}
+    {gameResult == "Time-Out" && <TimeOut amount={amount} sendToParent={handleChildData}/>}
     </>
   )
 }
