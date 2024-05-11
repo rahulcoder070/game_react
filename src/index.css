@@ -11,3 +11,6 @@ body {
   text-rendering: optimizeLegibility;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+a{
+  text-decoration: none;
+}

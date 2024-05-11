@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import '../style/MathGame.css';
 import Timer from '../component/Timer';
 import WinPopup from '../component/winPopup';
