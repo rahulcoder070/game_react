@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
         </div>
       </SignedIn>
-      <Link to='https://chatgpt.com/c/9b582f78-0d1b-4023-9d44-226897a446ee'>
+      <Link to='https://payments.cashfree.com/forms/win47'>
       <button className="nav-menu-item"><span><RiMoneyRupeeCircleLine/></span> AAD CASH</button>
       </Link>
       <NavLink to='/withdraw' onClick={()=> setOpenMenu(false)}>

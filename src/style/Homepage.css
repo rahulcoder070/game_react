@@ -18,7 +18,7 @@
     color: gold;
 }
 .Homepage-1st-img{
-    width: 70vw;
+    width: 90%;
 }
 .Page-Heading{
     text-align: center;
@@ -47,16 +47,4 @@
     width: 100%;
     text-align: center;
     padding: 5px 0;
-}
-.game-earning-multply{
-    position: absolute;
-    bottom: 30px;
-    right: 10px;
-    color: gold;
-    background-color: green;
-    border-radius: 50%;
-    padding: 5px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 500;
 }

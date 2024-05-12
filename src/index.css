@@ -2,8 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #242424; */
-  background-color: #153c2e;
+  background-color: #0d221a;
   color: white;
   color-scheme: light dark;
   -webkit-font-smoothing: antialiased;
@@ -13,4 +12,12 @@ body {
 }
 a{
   text-decoration: none;
+}
+
+#root {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  background-color: #153c2e;
 }
