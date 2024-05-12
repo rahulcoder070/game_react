@@ -32,7 +32,7 @@ const Navbar = () => {
       <SignedIn>
         {openMenu?
         <IoMdCloseCircleOutline className='nav-menu-close' onClick={()=>setOpenMenu(false)}/>:
-        <FaRegCircleUser className='nav-user-profile' onClick={()=>setOpenMenu(true)}/>
+        <FaRegCircleUser className='nav-user-icon' onClick={()=>setOpenMenu(true)}/>
       }
       </SignedIn>
     </header>

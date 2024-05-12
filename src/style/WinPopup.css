@@ -45,9 +45,9 @@
     margin-bottom: 10px;
 }
 
-/* POPUP */
+/* add money POPUP */
 .add-money-popup{
-    width: 70vw !important;
+    width: 70% !important;
 }
 .add-money-popup-container{
     padding-block: 0 20px;

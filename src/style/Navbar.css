@@ -34,19 +34,23 @@
     font-size: 16px;
     cursor: pointer;
 }
-.nav-user-profile{
+.nav-menu-close,
+.nav-user-icon{
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
 }
+.nav-menu-close{
+    scale: 1.23;
+}
 
 /* nav-Menu */
 .nav-menu{
-    width: 75vw;
+    width: 75%;
     height: 100vh;
     z-index: 1000;
     background-color: green;
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 50px;
     animation: nav-menu-animation .15s linear  forwards ;
@@ -73,9 +77,6 @@
     font-weight: 500;
     line-height: 25px;
     margin-bottom: 20px;
-}
-.nav-menu-close{
-    font-size: 38px;
 }
 .cl-avatarImage, 
 .cl-userButtonAvatarImage, 

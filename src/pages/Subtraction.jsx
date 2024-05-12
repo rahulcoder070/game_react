@@ -60,18 +60,18 @@ const Subtraction = () => {
         if(timer > 0){
             if(selectedValve == rightAnswer){
                 setGameResult("win");
-                const data = {user:auth.user, amount:auth.amount+amount*2, transactions:auth.transactions};
+                const data = {user:auth.user, amount:auth.amount+amount*2, transactions:auth.transactions, upi:auth.upi};
                 localStorage.setItem('auth', JSON.stringify(data));
                 setAuth(data)
             }else{
                 setGameResult("lose");
-                const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions};
+                const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions, upi:auth.upi};
                 localStorage.setItem('auth', JSON.stringify(data));
                 setAuth(data);
             }
         }else{
             setGameResult("Time-Out");
-            const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions};
+            const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions, upi:auth.upi};
             localStorage.setItem('auth', JSON.stringify(data));
             setAuth(data);
         }

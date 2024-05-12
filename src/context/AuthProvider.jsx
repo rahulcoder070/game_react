@@ -4,13 +4,13 @@ const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
 
-    const [auth, setAuth] = useState({ user: null, amount:0, transactions: null });
+    const [auth, setAuth] = useState({ user: null, amount:0, transactions: null, upi: null });
 
     useEffect(()=>{
         const data = localStorage.getItem('auth');
         if(data){
             const parseData = JSON.parse(data);
-            setAuth({ ...auth, user: parseData?.user, amount: parseData?.amount, transactions: parseData?.transactions })
+            setAuth({ ...auth, user: parseData?.user, amount: parseData?.amount, transactions: parseData?.transactions, upi: parseData?.upi })
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])

@@ -1,0 +1,89 @@
+.withdraw{
+    width: 100%;
+}
+.withdraw-container{
+    padding-inline: 5%;
+}
+.withdraw-upi-link{
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+}
+.withdraw-upi-link>img{
+    width: 100px;
+}
+.withdraw-upi-link>button{
+    border: none;
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+    font-size: 16px;
+    padding: 4px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.withdraw-upi-id{}
+
+
+
+.upi-popup{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff3c;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.upi-popup-container{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 250px;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+}
+.upi-popup-close{
+    color: black;
+    font-size: 25px;
+    top: 20px;
+    position: absolute;
+    right: 20px;
+}
+.upi-popup-container h2{
+    color: black;
+}
+.upi-popup-container input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent;
+    margin-inline: 40px;
+    color: black;
+}
+.upi-popup-container button{
+    margin-inline: 40px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 20px;
+    padding-block: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
