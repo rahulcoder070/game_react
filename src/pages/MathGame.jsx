@@ -4,6 +4,7 @@ import Timer from '../component/Timer';
 import WinPopup from '../component/winPopup';
 import LosePopup from '../component/LosePopup';
 import TimeOut from '../component/TimeOut';
+import { useAuth } from '../context/AuthProvider';
 
 const MathGame = () => {
 
@@ -17,6 +18,7 @@ const MathGame = () => {
     const [questionOptions, setQuestionOptions] = useState('');
     const [gameResultPopup, setGameResultPopup] = useState(false);
     const [gameResult, setGameResult] = useState("");
+    const [auth, setAuth] = useAuth();
       
       const handleChange = (e) => {
         setSelectedValve(e.target.value)
@@ -54,11 +56,20 @@ const MathGame = () => {
             if(selectedValve == rightAnswer){
                 setGameResultPopup(true);
                 setGameResult("win");
+                const data = {user:auth.user, amount:auth.amount+amount*2, transactions:auth.transactions};
+                localStorage.setItem('auth', JSON.stringify(data));
+                setAuth(data)
             }else{
                 setGameResult("lose");
+                const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions};
+                localStorage.setItem('auth', JSON.stringify(data));
+                setAuth(data);
             }
         }else{
             setGameResult("Time-Out");
+            const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions};
+            localStorage.setItem('auth', JSON.stringify(data));
+            setAuth(data);
         }
     }
 

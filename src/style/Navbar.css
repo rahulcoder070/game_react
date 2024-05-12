@@ -44,7 +44,7 @@
 .nav-menu{
     width: 75vw;
     height: 100vh;
-    z-index: 100;
+    z-index: 1000;
     background-color: green;
     position: fixed;
     left: 0;

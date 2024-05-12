@@ -13,11 +13,13 @@ import { RiMoneyRupeeCircleLine } from "react-icons/ri";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { SiGmail } from "react-icons/si";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
+import { useAuth } from '../context/AuthProvider';
 
 
 const Navbar = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
+  const [auth, setAuth] = useAuth();
 
   return (
     <>
@@ -47,7 +49,7 @@ const Navbar = () => {
         <UserButton className="nav-menu-profile-image"/>
           <div className="nav-menu-balance">
             <div className="">My Balance</div>
-            <div className="nav-menu-price">₹20</div>
+            <div className="nav-menu-price">₹{auth.amount}</div>
           </div>
         </div>
       </SignedIn>
