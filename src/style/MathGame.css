@@ -25,6 +25,7 @@
 }
 .no-spinner {
   -moz-appearance: textfield; /* Firefox */
+  color: white;
 }
 
 .no-spinner::-webkit-outer-spin-button,

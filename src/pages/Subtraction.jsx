@@ -5,8 +5,9 @@ import WinPopup from '../component/winPopup';
 import LosePopup from '../component/LosePopup';
 import TimeOut from '../component/TimeOut';
 import { useAuth } from '../context/AuthProvider';
+import AddMoneyPopup from '../component/AddMoneyPopup';
 
-const MathGame = () => {
+const Subtraction = () => {
 
     const [amount, setAmount] = useState(null);
     const [startGame, setStartGame] = useState(false);
@@ -16,18 +17,22 @@ const MathGame = () => {
     const [secondNumber, setSecondNumber] = useState('');
     const [rightAnswer, setRightAnswer] = useState('');
     const [questionOptions, setQuestionOptions] = useState('');
-    const [gameResultPopup, setGameResultPopup] = useState(false);
     const [gameResult, setGameResult] = useState("");
     const [auth, setAuth] = useAuth();
+    const [addMoneyPopup, setAddMoneyPopup] = useState(false);
       
       const handleChange = (e) => {
         setSelectedValve(e.target.value)
       }
 
       const handleStartGame = () => {
-        setStartGame(true);
-        setTimer(20);
-        questionready();
+        if(auth.amount >= amount){
+            setStartGame(true);
+            setTimer(20);
+            questionready();
+        }else{
+            setAddMoneyPopup(true);
+        }
       };
 
     const questionready = () => {
@@ -38,7 +43,7 @@ const MathGame = () => {
         let secondNumber = parseInt(string.slice(6,10));
         setSecondNumber(secondNumber)
         
-        let rightAnswer = firstNumber + secondNumber;
+        let rightAnswer = firstNumber - secondNumber;
         setRightAnswer(rightAnswer);
         let wrongAnswer1 = rightAnswer + parseInt(string.charAt(3));
         let wrongAnswer2 = rightAnswer - parseInt(string.charAt(4));
@@ -54,7 +59,6 @@ const MathGame = () => {
         setStartGame(false);
         if(timer > 0){
             if(selectedValve == rightAnswer){
-                setGameResultPopup(true);
                 setGameResult("win");
                 const data = {user:auth.user, amount:auth.amount+amount*2, transactions:auth.transactions};
                 localStorage.setItem('auth', JSON.stringify(data));
@@ -74,9 +78,11 @@ const MathGame = () => {
     }
 
     const handleChildData = () => {
-        setGameResultPopup(false);
         setGameResult('');
         setAmount(0);
+    }
+    const closeAddMoneyPopup =() => {
+        setAddMoneyPopup(false);
     }
 
   return (
@@ -87,7 +93,7 @@ const MathGame = () => {
             <h1 className='Page-Heading'>{startGame ? <div>Timer:- 0 : {timer}</div> : <div>Timer:- 0 : 20</div>}</h1>
         </div>
         {startGame ? <><div className="math-question-card">
-            <div className="math-question">(Q). {firstNumber} + {secondNumber}</div>
+            <div className="math-question">(Q). {firstNumber} - {secondNumber}</div>
             <form className='math-question-options'>
                 <div>
                     <input type="radio" id="option1" name="options" value={questionOptions[0]} onChange={handleChange}/>
@@ -109,7 +115,7 @@ const MathGame = () => {
             <button className='qustion-submit-button' onClick={()=>sumitQuestions()}>Submit</button>
         </div></> :
         <>
-        <h2 className='game-heading'>Invest and Earn Real Money 5×</h2>
+        <h2 className='game-heading'>Invest and Earn Real Money 2×</h2>
         <div className="money-add-game">
             <h3>Enter Amount</h3>
             <input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="numeric" className="no-spinner"/>
@@ -122,8 +128,10 @@ const MathGame = () => {
     {gameResult == "win" && <WinPopup amount={amount} sendToParent={handleChildData}/>}
     {gameResult == "lose" && <LosePopup amount={amount} sendToParent={handleChildData}/>}
     {gameResult == "Time-Out" && <TimeOut amount={amount} sendToParent={handleChildData}/>}
+
+    {addMoneyPopup && <AddMoneyPopup sendToParent={closeAddMoneyPopup}/>}
     </>
   )
 }
 
-export default MathGame
+export default Subtraction

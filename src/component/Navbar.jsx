@@ -15,7 +15,6 @@ import { SiGmail } from "react-icons/si";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { useAuth } from '../context/AuthProvider';
 
-
 const Navbar = () => {
 
   const [openMenu, setOpenMenu] = useState(false);

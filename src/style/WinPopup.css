@@ -1,4 +1,5 @@
-.winpopup{
+.winpopup,
+.add-money-popup{
     width: 100%;
     margin: auto;
     position: absolute;
@@ -7,11 +8,16 @@
     transform: translate(-50%, -50%);
     z-index: 100;
 }
+.add-money-popup-container,
 .winpopup-container{
     width: 90%;
     margin: auto;
     background-color: green;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
 }
 .winpopup-img{
     width: 100%;
@@ -36,7 +42,35 @@
     border-radius: 50px;
     cursor: pointer;
     padding: 10px;
-    &:hover{
-        background-color: #cbad01;
-    }
+    margin-bottom: 10px;
+}
+
+/* POPUP */
+.add-money-popup{
+    width: 70vw !important;
+}
+.add-money-popup-container{
+    padding-block: 0 20px;
+}
+.add-money-h2{
+    text-align: center;
+    margin-top: 20px;
+}
+.add-money-popup-close-button,
+.add-money-button{
+    background-color: gold;
+    color: green;
+    border: none;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+.add-money-popup-close-button{
+    background-color: white;
+    color: green;
 }
