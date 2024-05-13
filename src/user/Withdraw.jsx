@@ -9,34 +9,48 @@ const Withdraw = () => {
   const [amount,  setAmount] = useState(null);
   const [upi, setUpi] = useState("");
   const [upichangepopup, setUpichangepopup] = useState(false);
+  const [transactionId, settransactionId] = useState(null);
+  const [transactionDate, setTransactionDate] = useState();
+  const [withdrawPopup, setWithdrawPopup] = useState(false);
 
   const handleWithdraw = () => {
-    if(amount > auth.amount){
-      alert("Insufficient Balance");
+    if(amount>= 100){
+      let transactionId = (Math.random().toString().slice(2, 14));
+      let transactionDate = new Date().toLocaleString()
+      settransactionId(transactionId);
+      setTransactionDate(transactionDate)
+      setWithdrawPopup(true);
+      const data = {...auth, amount:auth.amount-amount, transactions:[[transactionId, transactionDate, `- ₹${amount}`], ...auth.transactions]};
+      localStorage.setItem('auth', JSON.stringify(data));
+      setAuth(data)
     }
   }
   const handleUpiid =()=>{
-    const data = {user:auth.user, amount:70, transactions:auth.transactions, upi:upi};
+    const data = {...auth, upi:upi};
     localStorage.setItem('auth', JSON.stringify(data));
-    setAuth(data)
+    setAuth(data);
+    setUpichangepopup(false);
   }
 
   return (
     <>
-    <div className='withdraw'>
-      <div className="withdraw-container">
+    <div className='Homepage'>
+      <div className="Homepage-container">
       <div className="withdraw-upi-link">
         <img src="https://res.cloudinary.com/dhse8vh5y/image/upload/v1715509453/Picsart_24-05-12_15-51-26-118_wkvavx.png" alt="" />
         {auth.upi ? <div className='withdraw-upi-id' onClick={()=>setUpichangepopup(true)}>{auth.upi.slice(0,2)}××××××{auth.upi.slice(-4)}</div> : <button onClick={()=>setUpichangepopup(true)}>Link</button>}
         
       </div>
-      <h2>My Balance <span>₹ {auth?.amount}</span></h2>
+      <div className="withdraw-account-balance">
+        <h3>My Balance</h3>
+        <h3>₹ {auth?.amount}</h3>
+      </div>
       <div className="money-add-game">
-            <h3>Enter Withdraw Amount</h3>
-            <input type="Number" placeholder='min 100' min={100} value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="numeric" className="no-spinner"/>
-            <button onClick={()=> handleWithdraw()}>Withdraw</button>
+            <h3>Instant Withdraw</h3>
+            <input type="Number" placeholder='Enter Withdraw Amount' min={100} value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="numeric" className='amount-input'/>
+            {amount < 100 && <div className='min-withdraw-text'>Minimum withdraw ₹100 </div>}
+            <button className='big-submit-button' onClick={()=> handleWithdraw()}>Withdraw</button>
         </div>
-
       </div>
     </div>
 
@@ -45,10 +59,22 @@ const Withdraw = () => {
       <div className="upi-popup-container">
         <IoCloseSharp className='upi-popup-close' onClick={()=>setUpichangepopup(false)}/>
           <h2>Enter a valid UPI ID</h2>
-          <input type="text" value={auth?.upi ? auth?.upi : upi} onChange={(e)=>setUpi(e.target.value)} className='upi-popup-input' placeholder='abc@upi / upi number'/>
-          <button onClick={()=> handleUpiid()}>Proceed</button>
+          <input type="text" value={upi} onChange={(e)=>setUpi(e.target.value)} className='amount-input' placeholder='abc@upi / upi number'/>
+          <button onClick={()=> handleUpiid()} className='big-submit-button'>Proceed</button>
       </div>
     </div> }
+
+{/* Widthrawl popup */}
+      {withdrawPopup &&
+      <div className="popup" onClick={()=> setWithdrawPopup(false)}>
+        <div className="popup-conatiner">
+          <img className='withdraw-blue-tick' src="https://res.cloudinary.com/dhse8vh5y/image/upload/v1715505417/Picsart_24-05-12_14-44-12-601_fwaczg.png" alt="" />
+          <div className='withdraw-amount'>₹ {amount}</div>
+          <div className='withdraw-successfully'>Withdraw Successfully</div>
+          <div className='withdraw-teansaction-id'>{transactionDate}</div>
+          <div className='withdraw-teansaction-id'>Transaction ID: {transactionId}</div>
+        </div>
+      </div>}
     </>
   )
 }

@@ -1,9 +1,4 @@
-.withdraw{
-    width: 100%;
-}
-.withdraw-container{
-    padding-inline: 5%;
-}
+.withdraw-account-balance,
 .withdraw-upi-link{
     background-color: white;
     border-radius: 5px;
@@ -11,9 +6,16 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 10px;
+    margin-block: 10px;
 }
 .withdraw-upi-link>img{
     width: 100px;
+}
+.min-withdraw-text{
+    color: red;
+}
+.money-add-game>h3{
+    margin-bottom: 50px;
 }
 .withdraw-upi-link>button{
     border: none;
@@ -27,7 +29,6 @@
     cursor: pointer;
 }
 .withdraw-upi-id{}
-
 
 
 .upi-popup{
@@ -65,25 +66,37 @@
 .upi-popup-container h2{
     color: black;
 }
-.upi-popup-container input{
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-    text-align: center;
-    font-size: 20px;
-    background-color: transparent;
-    margin-inline: 40px;
-    color: black;
+
+/*  */
+.popup{
+    width: 100%;
+    height: 100%;
 }
-.upi-popup-container button{
-    margin-inline: 40px;
-    margin-top: 50px;
-    border: none;
-    border-radius: 20px;
-    padding-block: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    background-color: green;
-    cursor: pointer;
+.popup-conatiner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: white;
+    width: 82%;
+    padding-block: 60px;
+    border-radius: 30px;
+    box-shadow: 0 0 80px gray;
+    text-align: center;
+}
+.withdraw-blue-tick{
+    width: 30%;
+}
+.withdraw-amount{
+    font-size: 30px;
+    margin-block: 20px 10px;
+}
+.withdraw-successfully{
+    color: green;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.withdraw-teansaction-id{
+    margin-block: 5px;
 }

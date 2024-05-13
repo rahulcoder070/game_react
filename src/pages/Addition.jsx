@@ -62,18 +62,18 @@ const Addition = () => {
             if(selectedValve == rightAnswer){
                 setGameResultPopup(true);
                 setGameResult("win");
-                const data = {user:auth.user, amount:auth.amount+amount*2, transactions:auth.transactions, upi:auth.upi};
+                const data = {...auth, amount:auth.amount+amount*2};
                 localStorage.setItem('auth', JSON.stringify(data));
                 setAuth(data)
             }else{
                 setGameResult("lose");
-                const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions, upi:auth.upi};
+                const data = {...auth, amount:auth.amount-amount};
                 localStorage.setItem('auth', JSON.stringify(data));
                 setAuth(data);
             }
         }else{
             setGameResult("Time-Out");
-            const data = {user:auth.user, amount:auth.amount-amount, transactions:auth.transactions, upi:auth.upi};
+            const data = {...auth, amount:auth.amount-amount};
             localStorage.setItem('auth', JSON.stringify(data));
             setAuth(data);
         }
@@ -118,11 +118,10 @@ const Addition = () => {
             <button className='qustion-submit-button' onClick={()=>sumitQuestions()}>Submit</button>
         </div></> :
         <>
-        <h2 className='game-heading'>Give Right Answer and EARN Real Money 2×</h2>
+        <p className='game-heading'>Give <span>Right</span> Answer and <span>WIN</span> Real Money 2×</p>
         <div className="money-add-game">
-            <h3>Enter Amount</h3>
-            <input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} inputMode="numeric" className="no-spinner amount-input-filed"/>
-            <button onClick={()=> handleStartGame()} className='big-submit-button'>Start</button>
+            <input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder='Enter Amount' inputMode="numeric" className="amount-input"/>
+            <button onClick={()=> handleStartGame()} className='big-submit-button'>Start Game</button>
         </div>
         </>}
         </div>

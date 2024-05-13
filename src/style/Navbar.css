@@ -39,6 +39,7 @@
     font-size: 30px;
     cursor: pointer;
     padding: 10px;
+    color: white;
 }
 .nav-menu-close{
     scale: 1.23;
@@ -46,7 +47,7 @@
 
 /* nav-Menu */
 .nav-menu{
-    width: 75%;
+    width: 80%;
     height: 100vh;
     z-index: 1000;
     background-color: green;
@@ -73,7 +74,7 @@
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    color: green !important;
+    /* color: green !important; */
     font-weight: 500;
     line-height: 25px;
     margin-bottom: 20px;
@@ -82,20 +83,18 @@
 .cl-userButtonAvatarImage, 
 .🔒️,
 .cl-internal-fhootk{
-    width: 70px !important;
-    height: 70px;
-}
-.nav-menu-profile-image{
-    width: 200px !important;
+    width: 60px !important;
+    height: 60px;
 }
 .nav-menu-price{
     font-size: 20px;
+    color: green;
 }
 .nav-menu-item{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c4ffc8;
+    background-color: #f2f1f1;
     color: black;
     margin-block: 10px;
     border-radius: 5px;
@@ -105,6 +104,7 @@
     border: none;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 500;
 }
 .nav-menu-item>span{
     font-size: 20px;
@@ -113,4 +113,7 @@
 }
 .nav-menu-help{
     margin-top: 40px;
+}
+.nav-menu-help p{
+    color: white;
 }

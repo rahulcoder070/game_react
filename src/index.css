@@ -18,7 +18,37 @@ a{
   max-width: 700px;
   min-height: 100vh;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
   position: relative;
-  background-color: #153c2e;
+  background-color: #dfdddd;
+  color: black;
+}
+
+
+/* comman css */
+.big-submit-button{
+  margin-inline: 40px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 20px;
+  padding-block: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+  width: 90%;
+}
+
+.amount-input{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-size: 20px;
+  background-color: transparent;
+  margin-inline: 40px;
+  color: black;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
 }

@@ -4,7 +4,7 @@ const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
 
-    const [auth, setAuth] = useState({ user: null, amount:0, transactions: null, upi: null });
+    const [auth, setAuth] = useState({ user: null, amount:0, transactions: {}, upi: null });
 
     useEffect(()=>{
         const data = localStorage.getItem('auth');

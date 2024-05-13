@@ -2,7 +2,7 @@
     width: 100%;
 }
 .Homepage-container{
-    padding: 2% 10%;
+    padding-inline: 5%;
 }
 .Homepage-show{
     display: flex;
@@ -12,19 +12,22 @@
     margin-block: 100px 50px;
 }
 .homepage-Title{
-    font-size: 25px;
+    font-size: 20px;
+    text-align: center;
 }
 .homepage-Title>span{
-    color: gold;
+    color: green;
 }
 .Homepage-1st-img{
-    width: 90%;
+    width: 100%;
 }
 .Page-Heading{
     text-align: center;
-    font-size: 40px;
-    background-image: linear-gradient(90deg, #ffd90001, gold, #ffd90001);
-    text-shadow: 0 2px 5px black;
+    font-size: 23px;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    margin-block: 10px;
 }
 .homepage-games{
     display: grid;

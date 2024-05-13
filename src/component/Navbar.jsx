@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="nav-menu-container">
       <SignedIn>
         <div className="nav-menu-profile">
-        <UserButton className="nav-menu-profile-image"/>
+        <UserButton/>
           <div className="nav-menu-balance">
             <div className="">My Balance</div>
             <div className="nav-menu-price">₹{auth.amount}</div>
