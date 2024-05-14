@@ -64,10 +64,10 @@ const Navbar = () => {
       <button className="nav-menu-item"><span><IoGameControllerOutline/></span>How To Play</button>
       <div className="nav-menu-help">
         <p>Help & Support</p>
-        <button className="nav-menu-item"><span><FaTelegramPlane/></span> Telegram</button>
-        <button className="nav-menu-item"><span><FaInstagram/></span> Instagram</button>
-        <button className="nav-menu-item"><span><FaWhatsapp/></span> Whatshapp</button>
-        <button className="nav-menu-item"><span><SiGmail/></span> win47.in@gmail.com</button>
+        <Link to='https://t.me/win47_in'><button className="nav-menu-item"><span><FaTelegramPlane/></span> Telegram</button></Link>
+        <NavLink to='https://www.instagram.com/win47.in'><button className="nav-menu-item"><span><FaInstagram/></span> Instagram</button></NavLink>
+        {/* <NavLink to=''><button className="nav-menu-item"><span><FaWhatsapp/></span> Whatshapp</button></NavLink> */}
+        <NavLink to='mailto:win47.in@gmail.com'><button className="nav-menu-item"><span><SiGmail/></span> win47.in@gmail.com</button></NavLink>
       </div>
       </div>
     </div>}
