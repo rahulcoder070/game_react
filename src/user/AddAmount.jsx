@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthProvider';
 
 const AddAmount = () => {
 
     const [auth, setAuth] = useAuth();
     let {id} = useParams();
-    console.log(id)
+    const navigate = useNavigate();
 
     useEffect(()=>{
         if(auth){
-            const data = {...auth, amount: id};
+            const data = {...auth, amount: parseInt(id)};
             localStorage.setItem('auth', JSON.stringify(data));
             setAuth(data);
+            navigate('/');
         }
-    })
+    },[])
 
   return (
     <>
