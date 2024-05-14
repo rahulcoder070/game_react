@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthProvider'
 import '../style/Withdraw.css';
 import { IoCloseSharp } from "react-icons/io5";
@@ -20,12 +20,16 @@ const Withdraw = () => {
       let transactionDate = new Date().toLocaleString();
       settransactionId(transactionId);
       setTransactionDate(transactionDate);
+      // let data = {...auth, transactions:[[transactionId, transactionDate, `- ₹${amount}`], ...auth?.transactions], amount:auth?.amount-amount};
+      let data = {...auth, transactions: [[transactionId, transactionDate, `- ₹${amount}`]], amount:auth?.amount-amount};
       setWithdrawPopup(true);
-      const data = {...auth, amount:auth.amount-amount, transactions:[[transactionId, transactionDate, `- ₹${amount}`], ...auth.transactions]};
       localStorage.setItem('auth', JSON.stringify(data));
       setAuth(data)
+    }else{
+      return alert("in Your account not have money")
     }
   }
+
   const handleUpiid =()=>{
     const data = {...auth, upi:upi};
     localStorage.setItem('auth', JSON.stringify(data));

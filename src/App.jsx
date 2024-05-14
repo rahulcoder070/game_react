@@ -9,6 +9,7 @@ import Addition from './pages/Addition';
 import Multiplication from './pages/Multiplication';
 import Subtraction from './pages/Subtraction';
 import Division from './pages/Division';
+import AddAmount from './user/AddAmount';
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         <Route path='/lucky-spin' exact element={<LuckySpinner />}/>
         <Route path='/withdraw' exact element={<Withdraw />}/>
         <Route path='/transactions' exact element={<Transactions />}/>
+
+        <Route path='/addamount-using-codinghub-powerby/:id' exact element={<AddAmount />}/>
 
 {/* games */}
         <Route path='/addition' exact element={<Addition />}/>

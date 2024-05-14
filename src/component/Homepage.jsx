@@ -26,10 +26,10 @@ const Homepage = () => {
                 <img src="https://res.cloudinary.com/dhse8vh5y/image/upload/v1715496055/win47/Picsart_24-05-12_11-43-17-270_ywwjyr.jpg" alt="" />
                 <div>× Game</div>
             </NavLink>
-            <NavLink to='/division' className="homepage-games-card">
+            {/* <NavLink to='/division' className="homepage-games-card">
                 <img src="https://res.cloudinary.com/dhse8vh5y/image/upload/v1715496055/win47/Picsart_24-05-12_11-53-50-470_cxcb6i.jpg" alt="" />
                 <div>÷ Game</div>
-            </NavLink>
+            </NavLink> */}
         </div>
         </div>
     </div>
