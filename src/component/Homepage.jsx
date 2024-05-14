@@ -7,7 +7,7 @@ const Homepage = () => {
     <div className='Homepage'>
         <div className="Homepage-container">
             <div className='Homepage-show'>
-                <img className='Homepage-1st-img' src="https://res.cloudinary.com/coderanil/image/upload/v1714291102/smiling-young-pretty-caucasian-girl-sun-glasses-holding-pointing-money-looking-camera-olive-green-removebg-preview_oy9snu.png" alt="" />
+                <img className='Homepage-1st-img' src="https://res.cloudinary.com/dhse8vh5y/image/upload/v1715684119/smiling-young-pretty-caucasian-girl-sun-glasses-holding-pointing-money-looking-camera-olive-green-removebg-preview-min_xanort.png" alt="" />
                 <h2 className='homepage-Title'><span>Calculation</span>(+, -, ×, ÷) Game</h2>
                 <h2 className='homepage-Title'>Give Right Answer and <span>EARN</span> Real Money 2×</h2>
             </div>
