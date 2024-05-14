@@ -55,6 +55,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
+    align-items: center;
 }
 .upi-popup-close{
     color: black;

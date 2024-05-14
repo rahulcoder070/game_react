@@ -12,24 +12,24 @@ import Division from './pages/Division';
 
 const App = () => {
   return (
-    <div className='App'>
+    <>
      <Router>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Homepage />}/>
-        <Route path='/lucky-spin' element={<LuckySpinner />}/>
-        <Route path='/withdraw' element={<Withdraw />}/>
-        <Route path='/transactions' element={<Transactions />}/>
+        <Route path='/' exact element={<Homepage />}/>
+        <Route path='/lucky-spin' exact element={<LuckySpinner />}/>
+        <Route path='/withdraw' exact element={<Withdraw />}/>
+        <Route path='/transactions' exact element={<Transactions />}/>
 
 {/* games */}
-        <Route path='/addition' element={<Addition />}/>
-        <Route path='/subtraction' element={<Subtraction />}/>
-        <Route path='/multiplication' element={<Multiplication />}/>
-        <Route path='/division' element={<Division />}/>
+        <Route path='/addition' exact element={<Addition />}/>
+        <Route path='/subtraction' exact element={<Subtraction />}/>
+        <Route path='/multiplication' exact element={<Multiplication />}/>
+        <Route path='/division' exact element={<Division />}/>
 
       </Routes>
     </Router>
-    </div>
+    </>
   )
 }
 

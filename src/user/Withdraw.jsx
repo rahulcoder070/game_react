@@ -13,12 +13,13 @@ const Withdraw = () => {
   const [transactionDate, setTransactionDate] = useState();
   const [withdrawPopup, setWithdrawPopup] = useState(false);
 
+  
   const handleWithdraw = () => {
     if(amount>= 100){
       let transactionId = (Math.random().toString().slice(2, 14));
-      let transactionDate = new Date().toLocaleString()
+      let transactionDate = new Date().toLocaleString();
       settransactionId(transactionId);
-      setTransactionDate(transactionDate)
+      setTransactionDate(transactionDate);
       setWithdrawPopup(true);
       const data = {...auth, amount:auth.amount-amount, transactions:[[transactionId, transactionDate, `- ₹${amount}`], ...auth.transactions]};
       localStorage.setItem('auth', JSON.stringify(data));
