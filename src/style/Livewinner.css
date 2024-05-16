@@ -1,0 +1,32 @@
+.live-winner{
+    padding-block: 20px;
+}
+.live-winner-container{
+    display: flex;
+    flex-direction: column;
+}
+.live-winner-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: var(--van-prime-card);
+    margin-block: 2px;
+    border-radius: var(--van-radius-md);
+}
+.live-winner-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.live-winner-game{}
+.live-winner-money{}
+.live-winner-money > :nth-child(1){
+    color: #00c8ff;
+    font-weight: 600;
+}
+.live-winner-money > :nth-child(2){
+    color: #00c8ffc9;
+    font-size: 14px;
+}

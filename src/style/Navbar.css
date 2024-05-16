@@ -1,6 +1,6 @@
 .Navbar{
     width: 100%;
-    background-color: green;
+    background-color: var(--van-prime-dark);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -47,10 +47,10 @@
 
 /* nav-Menu */
 .nav-menu{
-    width: 80%;
+    width: 75%;
     height: 100vh;
     z-index: 1000;
-    background-color: green;
+    background-color: var(--van-prime-dark);
     position: sticky;
     left: 0;
     top: 50px;
@@ -65,16 +65,16 @@
     }
   }
 .nav-menu-container{
-    padding: 20px;
+    padding: 10px;
 }
 .nav-menu-profile{
     display: flex;
+    color: gold;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: var(--van-prime-card);
     padding: 10px;
     border-radius: 5px;
-    /* color: green !important; */
     font-weight: 500;
     line-height: 25px;
     margin-bottom: 20px;
@@ -83,19 +83,18 @@
 .cl-userButtonAvatarImage, 
 .🔒️,
 .cl-internal-fhootk{
-    width: 60px !important;
-    height: 60px;
+    width: 50px !important;
+    height: 50px;
 }
 .nav-menu-price{
     font-size: 20px;
-    color: green;
 }
 .nav-menu-item{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2f1f1;
-    color: black;
+    background-color: var(--van-prime-card);
+    color: white;
     margin-block: 10px;
     border-radius: 5px;
     padding: 10px;
