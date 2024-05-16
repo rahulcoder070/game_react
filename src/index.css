@@ -70,17 +70,17 @@ a{
 
 /* comman css */
 .big-submit-button{
-  margin-inline: 40px;
-  margin-top: 50px;
   border: none;
   border-radius: 20px;
   padding-block: 10px;
   font-size: 18px;
   font-weight: 700;
   color: white;
-  background-color: green;
+  background-color: var(--van-prime-dark);
+  border: 1px solid gold;
   cursor: pointer;
   width: 90%;
+  margin: 30px auto;
 }
 
 .amount-input{
