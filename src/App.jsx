@@ -10,12 +10,14 @@ import Multiplication from './pages/Multiplication';
 import Subtraction from './pages/Subtraction';
 import Division from './pages/Division';
 import AddAmount from './user/AddAmount';
+import ScrollToTop from './component/ScrollToTop';
 
 const App = () => {
   return (
     <>
      <Router>
       <Navbar/>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' exact element={<Homepage />}/>
         <Route path='/lucky-spin' exact element={<LuckySpinner />}/>

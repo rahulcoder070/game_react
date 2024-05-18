@@ -8,9 +8,9 @@ const Transactions = () => {
 
   return (
     <>
-      <div className='Page-Heading'>Transactions</div>
     <div className="transactions">
       <div className="transactions-container">
+      <div className='homepage-heading'>Transactions</div>
         {Array.isArray(auth?.transactions) && auth?.transactions.map((data, index)=>(
           <div key={index} className="transactions-card">
           <div className="transactions-name">Withdraw</div>

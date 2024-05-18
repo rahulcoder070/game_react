@@ -95,7 +95,6 @@ const MathGames = ({gameName}) => {
   return (
     <>
     <div className='mathgame'>
-        {gameName}
         <div className="mathgame-container">
         <div>
             <h1 className='game-timer'>{startGame ? <div>Timer:- 0 : {timer}</div> : <div>Timer:- 0 : 20</div>}</h1>

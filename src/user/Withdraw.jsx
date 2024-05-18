@@ -44,7 +44,6 @@ const Withdraw = () => {
       <div className="withdraw-upi-link">
         <img src="https://res.cloudinary.com/dhse8vh5y/image/upload/v1715509453/Picsart_24-05-12_15-51-26-118_wkvavx.png" alt="" />
         {auth.upi ? <div className='withdraw-upi-id' onClick={()=>setUpichangepopup(true)}>{auth.upi.slice(0,2)}××××××{auth.upi.slice(-4)}</div> : <button onClick={()=>setUpichangepopup(true)}>Link</button>}
-        
       </div>
       <div className="withdraw-account-balance">
         <h3>My Balance</h3>

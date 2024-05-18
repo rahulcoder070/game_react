@@ -4,7 +4,12 @@
 .Homepage-container{
     padding-inline: 5%;
 }
-
+.Homepage-banner-img{
+    width: 100%;
+    background-color: red;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
 .homepage-heading{
     text-align: center;
     font-size: 22px;
@@ -17,18 +22,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-block: 100px 50px;
+    margin-block: 10px 50px;
 }
 .homepage-Title{
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
 }
 .homepage-Title>span{
     color: gold;
 }
 .Homepage-1st-img{
-    width: 100%;
+    width: 70%;
 }
 .homepage-games{
     display: grid;

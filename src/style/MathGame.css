@@ -2,6 +2,7 @@
     width: 100%;
 }
 .mathgame-container{
+    max-height: 10vh;
     padding-inline: 10%;
     display: flex;
     flex-direction: column;

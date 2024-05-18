@@ -19,6 +19,8 @@
     align-items: center;
     border: 3px solid white;
     box-shadow: 0 0 40px #00000041;
+    background-color: var(--van-prime-card);
+    padding-block: 0 20px;
 }
 .winpopup-img{
     width: 100%;
@@ -33,7 +35,7 @@
 }
 .winpopup-button{
     background-color: gold;
-    color: green;
+    color: var(--van-prime-text);
     border: none;
     margin: auto;
     display: grid;
@@ -44,14 +46,12 @@
     cursor: pointer;
     padding: 10px;
     margin-bottom: 10px;
+    border: 2px solid white;
 }
 
 /* add money POPUP */
 .add-money-popup{
     width: 90% !important;
-}
-.add-money-popup-container{
-    padding-block: 0 20px;
 }
 .add-money-h2{
     text-align: center;
@@ -60,8 +60,8 @@
 }
 .add-money-popup-close-button,
 .add-money-button{
-    background-color: gold;
-    color: green;
+    background-color: var(--van-prime-dark);
+    color: white;
     border: none;
     text-align: center;
     width: 110px;
@@ -71,8 +71,9 @@
     font-weight: 700;
     margin: 20px 10px;
     cursor: pointer;
+    border: 1px solid gold;
 }
 .add-money-popup-close-button{
-    background-color: white;
-    color: green;
+    /* background-color: white; */
+    /* color: green; */
 }
