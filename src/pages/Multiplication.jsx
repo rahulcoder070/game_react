@@ -4,7 +4,7 @@ import MathGames from '../component/MathGames'
 const Multiplication = () => {
   return (
     <>
-    <MathGames gameName={"*"}/> 
+    <MathGames gameName={"×"}/> 
     </>
   )
 }

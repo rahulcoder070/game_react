@@ -11,6 +11,7 @@ import Subtraction from './pages/Subtraction';
 import Division from './pages/Division';
 import AddAmount from './user/AddAmount';
 import ScrollToTop from './component/ScrollToTop';
+// import Login from './component/Login';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <ScrollToTop/>
       <Routes>
         <Route path='/' exact element={<Homepage />}/>
+        {/* <Route path='/login' exact element={<Login />}/> */}
         <Route path='/lucky-spin' exact element={<LuckySpinner />}/>
         <Route path='/withdraw' exact element={<Withdraw />}/>
         <Route path='/transactions' exact element={<Transactions />}/>

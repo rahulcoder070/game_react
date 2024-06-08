@@ -15,7 +15,7 @@ const Withdraw = () => {
 
   
   const handleWithdraw = () => {
-    if(amount>= 100){
+    if(auth?.amount>= 100){
       let transactionId = (Math.random().toString().slice(2, 14));
       let transactionDate = new Date().toLocaleString();
       settransactionId(transactionId);

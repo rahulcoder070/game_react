@@ -4,12 +4,6 @@
 .Homepage-container{
     padding-inline: 5%;
 }
-.Homepage-banner-img{
-    width: 100%;
-    background-color: red;
-    margin-bottom: 30px;
-    border-radius: 5px;
-}
 .homepage-heading{
     text-align: center;
     font-size: 22px;
